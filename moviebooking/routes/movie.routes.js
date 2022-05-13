@@ -1,8 +1,20 @@
 const movieController = require("../controllers/movie.controller");
 const movieRouter = require("express").Router();
 
-movieRouter.get("/", movieController.findAllMovies);
-// movieRouter.get("/:id", findOne);
-// movieRouter.get("/:id/shows", findShows);
+
+movieRouter
+    .route('/')
+    .get(movieController.findAllMovies)
+
+
+movieRouter
+    .route('/:id')
+    .get(movieController.findOne)
+
+
+movieRouter
+    .route('/:id/shows')
+    .get(movieController.findShows)
+
 
 module.exports = movieRouter;

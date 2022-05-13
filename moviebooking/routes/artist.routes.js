@@ -3,6 +3,8 @@ const {
 } = require("../controllers/artist.controller");
 const artistRouter = require("express").Router();
 
-artistRouter.get("/", findAllArtists);
+artistRouter
+    .route('/')
+    .get(findAllArtists);
 
 module.exports = artistRouter;

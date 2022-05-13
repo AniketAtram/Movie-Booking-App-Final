@@ -12,7 +12,7 @@ const PORT = 3000;
 const cors_opt = {
     origin: `127.0.0.1:${PORT}`
 };
-// express middlewares
+// Middlewares
 app.use(express.json());
 app.use(express.urlencoded({
     extended: true
