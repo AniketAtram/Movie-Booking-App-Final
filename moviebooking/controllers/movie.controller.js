@@ -13,7 +13,7 @@ async function findAllMovies(req, res) {
             status: OK,
             movies: movie
         });
-    } catch {
+    } catch (err) {
         res.status(INT_SERV_ERR).json({
             status: INT_SERV_ERR,
             message: err.message

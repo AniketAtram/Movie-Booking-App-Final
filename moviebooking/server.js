@@ -5,6 +5,7 @@ const cors = require('cors');
 const artistRouter = require("./routes/artist.routes");
 const genreRouter = require("./routes/genre.routes");
 const movieRouter = require("./routes/movie.routes");
+const userRouter = require("./routes/user.routes");
 const app = express();
 // The port number on which the server is going to listen
 const PORT = 3000;
@@ -47,6 +48,7 @@ app.get("/", (req, res) => {
 app.use("/api/artists", artistRouter);
 app.use("/api/genres", genreRouter);
 app.use("/api/movies", movieRouter);
+app.use("/api/auth", userRouter);
 
 app.listen(PORT, '127.0.0.1', () => {
     console.log(`Server has started and is listening on port: ${PORT}`);

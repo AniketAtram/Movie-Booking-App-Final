@@ -11,7 +11,7 @@ async function findAllArtists(req, res) {
             status: OK,
             artists: data
         });
-    } catch {
+    } catch (err) {
         res.status(NOT_FOUND).json({
             sataus: NOT_FOUND,
             message: "Data not found!"
